@@ -1,4 +1,4 @@
-package com.viki.javaplus.Lock;
+package com.viki.javaplus.zookeeper.Lock;
 
 import org.I0Itec.zkclient.IZkDataListener;
 

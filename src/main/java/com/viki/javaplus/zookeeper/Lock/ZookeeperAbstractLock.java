@@ -1,7 +1,6 @@
-package com.viki.javaplus.Lock;
+package com.viki.javaplus.zookeeper.Lock;
 
 
-import com.viki.javaplus.Lock.Lock;
 import org.I0Itec.zkclient.ZkClient;
 
 import java.util.concurrent.CountDownLatch;

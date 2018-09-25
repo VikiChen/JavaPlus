@@ -1,4 +1,4 @@
-package com.viki.javaplus.Lock;
+package com.viki.javaplus.zookeeper.Lock;
 
 
 //lock 锁 定义分布式锁

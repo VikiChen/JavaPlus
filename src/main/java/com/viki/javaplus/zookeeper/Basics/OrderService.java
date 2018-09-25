@@ -1,6 +1,6 @@
 package com.viki.javaplus.zookeeper.Basics;
 
-import com.viki.javaplus.Lock.ZookeeperDistrbuteLock;
+import com.viki.javaplus.zookeeper.Lock.ZookeeperDistrbuteLock;
 
 //这个写法会有很多漏洞
 public class OrderService implements Runnable {
@@ -9,7 +9,7 @@ public class OrderService implements Runnable {
    //使用重入锁
   // private Lock lock=new ReentrantLock();
     //使用自定义分布式锁
-    private com.viki.javaplus.Lock.Lock lock =new ZookeeperDistrbuteLock();
+    private com.viki.javaplus.zookeeper.Lock.Lock lock =new ZookeeperDistrbuteLock();
     @Override
     public void run() {
 //        synchronized (this){
