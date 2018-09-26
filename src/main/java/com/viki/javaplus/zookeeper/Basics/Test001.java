@@ -33,7 +33,7 @@ public class Test001 {
         });
         // 进行阻塞
         countDownLatch.await();
-        String result = zk.create("/ak47_Lasting", "Lasting".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE,
+        String result = zk.create("/member", "temp".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE,
                 CreateMode.PERSISTENT);
         System.out.println(result);
         zk.close();
