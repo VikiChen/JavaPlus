@@ -7,7 +7,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BaseRedisService {
+public class BaseRedisServiceAccessToken {
 
 	@Autowired
 	private StringRedisTemplate stringRedisTemplate;

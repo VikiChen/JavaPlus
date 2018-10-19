@@ -4,7 +4,7 @@ import java.util.UUID;
 
 import com.viki.javaplus.openPlatform.accessToken.service.BaseApiService;
 import com.viki.javaplus.openPlatform.accessToken.service.ResponseBase;
-import com.viki.javaplus.openPlatform.accessToken.utils.BaseRedisService;
+import com.viki.javaplus.openPlatform.accessToken.utils.BaseRedisServiceAccessToken;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.deser.Deserializers.Base;
 @RestController
 public class PayController extends BaseApiService {
 	@Autowired
-	private BaseRedisService baseRedisService;
+	private BaseRedisServiceAccessToken baseRedisService;
 
 	private static final Long TOKENTIME = (long) (30 * 60);
 

@@ -5,7 +5,7 @@ import com.viki.javaplus.openPlatform.accessToken.entity.AppEntity;
 import com.viki.javaplus.openPlatform.accessToken.mapper.AppMapper;
 import com.viki.javaplus.openPlatform.accessToken.service.BaseApiService;
 import com.viki.javaplus.openPlatform.accessToken.service.ResponseBase;
-import com.viki.javaplus.openPlatform.accessToken.utils.BaseRedisService;
+import com.viki.javaplus.openPlatform.accessToken.utils.BaseRedisServiceAccessToken;
 import com.viki.javaplus.openPlatform.accessToken.utils.TokenUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/auth")
 public class AuthController extends BaseApiService {
     @Autowired
-    private BaseRedisService baseRedisService;
+    private BaseRedisServiceAccessToken baseRedisService;
     private long timeToken = 60 * 60 * 2;
     @Autowired
     private AppMapper appMapper;

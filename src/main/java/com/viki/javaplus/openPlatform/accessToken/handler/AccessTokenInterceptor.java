@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 import com.viki.javaplus.openPlatform.accessToken.service.BaseApiService;
-import com.viki.javaplus.openPlatform.accessToken.utils.BaseRedisService;
+import com.viki.javaplus.openPlatform.accessToken.utils.BaseRedisServiceAccessToken;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -23,7 +23,7 @@ import com.fasterxml.jackson.databind.deser.Deserializers.Base;
 @Component
 public class AccessTokenInterceptor extends BaseApiService implements HandlerInterceptor {
 	@Autowired
-	private BaseRedisService baseRedisService;
+	private BaseRedisServiceAccessToken baseRedisService;
 
 	/**
 	 * 进入controller层之前拦截请求
