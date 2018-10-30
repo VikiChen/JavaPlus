@@ -19,8 +19,8 @@ public class Test003 {
     public void test002() throws IOException {
         long startTime= System.currentTimeMillis();
         //直接缓冲区
-        FileChannel inChannel = FileChannel.open(Paths.get("1.mp4"), StandardOpenOption.READ);
-        FileChannel outChannel = FileChannel.open(Paths.get("2.mp4"), StandardOpenOption.WRITE,StandardOpenOption.READ,StandardOpenOption.CREATE);
+        FileChannel inChannel = FileChannel.open(Paths.get("1.zip"), StandardOpenOption.READ);
+        FileChannel outChannel = FileChannel.open(Paths.get("2.zip"), StandardOpenOption.WRITE,StandardOpenOption.READ,StandardOpenOption.CREATE);
         //定义映射文件
         MappedByteBuffer inMappdeByte = inChannel.map(FileChannel.MapMode.READ_ONLY, 0, inChannel.size());
         MappedByteBuffer outMappdeByte = outChannel.map(FileChannel.MapMode.READ_WRITE, 0, inChannel.size());
@@ -39,9 +39,9 @@ public class Test003 {
         long startTime= System.currentTimeMillis();
         //非直接缓冲区  读写操作
         //读入
-        FileInputStream fileInputStream = new FileInputStream("1.mp4");
+        FileInputStream fileInputStream = new FileInputStream("1.zip");
         //写入流
-        FileOutputStream fileOutputStream = new FileOutputStream("2.mp4");
+        FileOutputStream fileOutputStream = new FileOutputStream("3.zip");
         //创建通道
         FileChannel inC=fileInputStream.getChannel();
         FileChannel outC = fileOutputStream.getChannel();
