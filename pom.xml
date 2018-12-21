@@ -153,7 +153,11 @@
             <artifactId>fastdfs_client</artifactId>
             <version>1.25</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>22.0</version>
+        </dependency>
         <!--spring session 与redis应用基本环境配置,需要开启redis后才可以使用，不然启动Spring boot会报错 -->
         <dependency>
             <groupId>org.springframework.session</groupId>

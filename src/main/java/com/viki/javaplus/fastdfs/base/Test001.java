@@ -16,7 +16,7 @@ public class Test001 {
     //客户端配置文件
     public String conf_filename = "D:\\JavaPlus\\src\\main\\java\\com\\viki\\javaplus\\fastdfs\\base\\fdfs_client.conf";
     //本地文件，要上传的文件
-    public String local_filename = "C:\\Users\\viki\\Downloads\\1.jpg";
+    public String local_filename = "D:\\timg.jpg";
 
 
     //将字节流写到磁盘生成文件
@@ -102,10 +102,10 @@ public class Test001 {
 //                    storageServer);
             StorageClient1 storageClient = new StorageClient1(trackerServer, storageServer);
             byte[] b = storageClient.download_file("group1",
-                    "M00/00/00/wKhlBVVZvU6AV3MyAAE1Bar7bBg889.jpg");
+                    "M00/00/00/CmUMB1v7u7eAQiceAADBxRZ-4Dc492.jpg");
             if(b !=null){
                 System.out.println(b.length);
-                saveFile(b, "F:\\develop\\upload\\temp\\", UUID.randomUUID().toString()+".jpg");
+                saveFile(b, "D:\\", UUID.randomUUID().toString()+".jpg");
             }
 
         } catch (Exception e) {
